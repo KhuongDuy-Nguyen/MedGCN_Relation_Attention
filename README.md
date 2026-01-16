@@ -151,3 +151,34 @@ Including:
 
 - NHANES dataset (Kaggle mirror):  
   https://www.kaggle.com/datasets/cdc/national-health-and-nutrition-examination-survey
+
+---
+
+## Added: Multiple Runs (Mean ± Std), Confusion Matrix, Minority Recall
+
+To address robustness and screening-oriented metrics, `train_all.py` now supports:
+
+- **Multiple runs with different random seeds** and a final report of **mean ± std**.
+- **Confusion matrix** saved per model per seed.
+- **Minority-class recall** (the recall of the less frequent class in the test split).
+
+### Example: 5 seeds
+
+```bash
+python train_all.py --seeds "0,1,2,3,4"
+```
+
+### Control runtime
+
+```bash
+python train_all.py --seeds "0,1,2,3,4" --epochs 100 --no_plots
+```
+
+### Outputs
+
+Saved under `results/` (or `--results_dir`):
+
+- `results_all_models_runs.csv`: per-seed, per-model metrics.
+- `results_all_models_mean_std.csv`: mean/std over seeds per model.
+- `results/seed_<SEED>/confusion_matrix_<MODEL>.png`: confusion matrix plots.
+
