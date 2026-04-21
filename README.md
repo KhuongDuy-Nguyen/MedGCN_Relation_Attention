@@ -1,11 +1,8 @@
-# MedGCN – NHANES Diabetes Classification (Code Repository)
+# Context-Rich Patient Representation Learning for Diabetes Prediction Using MedGCN
+> doi: https://doi.org/10.1007/978-3-032-21631-1_39
 
 This repository contains an implementation for **diabetes classification** on the  
 **NHANES (National Health and Nutrition Examination Survey)** dataset using graph-based models.
-
-> **Scope of this README**  
-> This document describes **dataset usage, project structure, and how to run the code only**.  
-> Model theory and mathematical formulations are intentionally excluded.
 
 ---
 
